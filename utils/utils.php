@@ -10,7 +10,7 @@ function checkLogin() {
         session_start();
     }
     if (!isset($_SESSION['username'])) {
-        header("Location: /index.php?page=auth");
+        header("Location: index.php?page=auth");
         exit;
     }
 }
