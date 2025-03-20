@@ -46,7 +46,7 @@ CREATE TABLE IF NOT EXISTS `accounts` (
 --
 
 INSERT INTO `accounts` (`AccountID`, `FName`, `LName`, `Username`, `Password`, `Email`, `Role`) VALUES
-(1, 'Admin', 'User', 'admin', '$2y$10$ZXbpK8wXTW4/rmf2DQiVhu0.iQHqAxGnBXZPQV839c9gwYw1y3IN2', 'eweay@gmail.com', 'admin'),
+(1, 'Admin', 'User', 'admin', '$2y$10$Z/SVcGEV0U5dQHgH./OxT.zoMc2vaQGmnfuF/PKB4R52D1ywfQJdO', 'eweay@gmail.com', 'admin'),
 (10, 'John', 'Doe', 'johndoe', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEaB3zC6ZGdWNn5FK0mG6X0Jj1C2', 'john.doe@example.com', 'user'),
 (11, 'Jane', 'Smith', 'janesmith', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEaB3zC6ZGdWNn5FK0mG6X0Jj1C2', 'jane.smith@example.com', 'user'),
 (13, 'Emily', 'Davis', 'emilydavis', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEaB3zC6ZGdWNn5FK0mG6X0Jj1C2', 'emily.davis@example.com', 'user'),
