@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Mar 17, 2025 at 11:06 AM
+-- Generation Time: Mar 20, 2025 at 02:11 PM
 -- Server version: 9.1.0
 -- PHP Version: 8.3.14
 
@@ -30,16 +30,16 @@ SET time_zone = "+00:00";
 DROP TABLE IF EXISTS `accounts`;
 CREATE TABLE IF NOT EXISTS `accounts` (
   `AccountID` int NOT NULL AUTO_INCREMENT,
-  `FName` varchar(30) NOT NULL,
-  `LName` varchar(30) NOT NULL,
-  `Username` varchar(30) NOT NULL,
-  `Password` varchar(255) NOT NULL,
-  `Email` varchar(50) NOT NULL,
-  `Role` enum('admin','user') NOT NULL DEFAULT 'user',
+  `FName` varchar(30) COLLATE utf8mb4_general_ci NOT NULL,
+  `LName` varchar(30) COLLATE utf8mb4_general_ci NOT NULL,
+  `Username` varchar(30) COLLATE utf8mb4_general_ci NOT NULL,
+  `Password` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `Email` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `Role` enum('admin','user') COLLATE utf8mb4_general_ci NOT NULL DEFAULT 'user',
   PRIMARY KEY (`AccountID`),
   UNIQUE KEY `Username` (`Username`),
   UNIQUE KEY `Email` (`Email`)
-) ENGINE=MyISAM AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;;
+) ENGINE=MyISAM AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `accounts`
@@ -47,24 +47,15 @@ CREATE TABLE IF NOT EXISTS `accounts` (
 
 INSERT INTO `accounts` (`AccountID`, `FName`, `LName`, `Username`, `Password`, `Email`, `Role`) VALUES
 (1, 'Admin', 'User', 'admin', '$2y$10$ZXbpK8wXTW4/rmf2DQiVhu0.iQHqAxGnBXZPQV839c9gwYw1y3IN2', 'eweay@gmail.com', 'admin'),
-(4, 'samer', 'abuatta', 'samerabuatta', '$2y$10$B4VCAFeAQ6Y4M6ph/oxjT.e4wkkNSe/x5FaGNCF3OVJGVjVfZ.Ofi', 'samer@gmail.com', 'user'),
-(8, 'Hussain1', 'Ishan1', 'hussish', '$2y$10$nUj3jfyqXyMbOvhUTooehueNe/CWcZA.waAOT9QhWJmnSHvQxwNxK', 'hussish929@gmail.com', 'admin'),
-(9, 'Hussain', 'Ishan', 'HighKickz', '$2y$10$iTenlt2q8KTqtm8wzALtp.DpNWLKtPOW6xfa44bsuU1Ntlujo0Vbi', 'asdasda@gmail.com', 'admin'),
-(26, 'normal', 'user', 'normal', '$2y$10$bsM/US0WZ1XGMncPv.B9Ye2trqGpH0usegCu6Oi9VN1k6OcDu.yWq', 'normal@gmail.com', 'user'),
 (10, 'John', 'Doe', 'johndoe', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEaB3zC6ZGdWNn5FK0mG6X0Jj1C2', 'john.doe@example.com', 'user'),
 (11, 'Jane', 'Smith', 'janesmith', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEaB3zC6ZGdWNn5FK0mG6X0Jj1C2', 'jane.smith@example.com', 'user'),
-(20, 'Hala', 'Hala', 'Hala', '$2y$10$X4vKMgqoAF2MS1GGr/GlvOAdLzCtW1w30DWh5kXE2l1hjYuJg1iOu', 'Hala@gmail.com', 'user'),
 (13, 'Emily', 'Davis', 'emilydavis', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEaB3zC6ZGdWNn5FK0mG6X0Jj1C2', 'emily.davis@example.com', 'user'),
 (14, 'Michael', 'Brown', 'michaelbrown1', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEaB3zC6ZGdWNn5FK0mG6X0Jj1C2', 'michael.brown@example.com', 'user'),
 (15, 'Sarah', 'Miller', 'sarahmiller', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEaB3zC6ZGdWNn5FK0mG6X0Jj1C2', 'sarah.miller@example.com', 'user'),
 (16, 'David', 'Wilson', 'davidwilson', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEaB3zC6ZGdWNn5FK0mG6X0Jj1C2', 'david.wilson@example.com', 'user'),
 (17, 'Laura', 'Moore', 'lauramoore', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEaB3zC6ZGdWNn5FK0mG6X0Jj1C2', 'laura.moore@example.com', 'admin'),
 (18, 'Chris', 'Taylor', 'christaylor', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEaB3zC6ZGdWNn5FK0mG6X0Jj1C2', 'chris.taylor@example.com', 'user'),
-(29, 'Olivia', 'Noob', 'Olivia1', '$2y$10$u8ygVosa5JA4DQ7Hcxgb3u90/PgT1Og55bMip3SQPeUDXfiiRgnce', 'OlivaNoob@gmail.com', 'user'),
-(21, 'Hussain', 'Ishan', 'Hussish66', '$2y$10$FKjDmiHg5XPMg8s2yT6.5u/GjSGFkamiYch53kDz1EeniuVu4c736', 'Hussish66@gmail.com', 'user'),
-(22, 'Hussain', 'Ishan', 'newacct2', '$2y$10$6csumfy1Em9svWKdXggflOOX0V6.jkgr5IJEZyfSRKIFchp9z0WIS', 'newacct2@gmail.com', 'user'),
-(24, 'Hussain', 'Ishan', 'darkmaster4623', '$2y$10$4O4Zu1SdelYCV0JW/vX3Gud5iYe3i2cRiRuE3O9yTEpwx/lkvVadu', 'jb19990801@gmail.com', 'admin'),
-(30, 'normal', 'normal', 'normal23', '$2y$10$eozRvoUdiVq6Ovuw7RvHb.W4Ylnzz0jzejzaAltsst90yl0dArB4C', 'admin22323@gmail.com', 'user');
+(29, 'Olivia', 'Noob', 'Olivia1', '$2y$10$u8ygVosa5JA4DQ7Hcxgb3u90/PgT1Og55bMip3SQPeUDXfiiRgnce', 'OlivaNoob@gmail.com', 'user');
 
 -- --------------------------------------------------------
 
@@ -75,7 +66,7 @@ INSERT INTO `accounts` (`AccountID`, `FName`, `LName`, `Username`, `Password`, `
 DROP TABLE IF EXISTS `categories`;
 CREATE TABLE IF NOT EXISTS `categories` (
   `CategoryID` int NOT NULL AUTO_INCREMENT,
-  `CategoryName` varchar(255) NOT NULL,
+  `CategoryName` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`CategoryID`)
 ) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -102,61 +93,29 @@ INSERT INTO `categories` (`CategoryID`, `CategoryName`) VALUES
 DROP TABLE IF EXISTS `inqueries`;
 CREATE TABLE IF NOT EXISTS `inqueries` (
   `MessageID` int NOT NULL AUTO_INCREMENT,
-  `Name` varchar(255) NOT NULL,
-  `Email` varchar(255) NOT NULL,
-  `Message` text NOT NULL,
+  `Name` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `Email` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `Message` text COLLATE utf8mb4_general_ci NOT NULL,
   `CreatedAt` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
-  `Status` enum('Opened','Unopened','Closed','In Process') DEFAULT 'Unopened',
+  `Status` enum('Opened','Unopened','Closed','In Process') COLLATE utf8mb4_general_ci DEFAULT 'Unopened',
   PRIMARY KEY (`MessageID`)
-) ENGINE=MyISAM AUTO_INCREMENT=43 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=53 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `inqueries`
 --
 
 INSERT INTO `inqueries` (`MessageID`, `Name`, `Email`, `Message`, `CreatedAt`, `Status`) VALUES
-(1, 'Hello', 'Hello@gmail.com', 'Hello', '2025-03-13 12:50:25', 'Closed'),
-(2, 'asdasd', 'asdasd@gmail.com', 'asdasdw', '2025-03-13 12:53:05', 'Closed'),
-(3, 'asdasd@gmail.com', 'asdasd@gmail.com', 'asdasd@gmail.com', '2025-03-13 12:53:10', 'Unopened'),
-(4, 'asdasd@gmail.com', 'asdasd@gmail.com', 'asdasd@gmail.com', '2025-03-13 12:53:15', 'Unopened'),
-(5, 'asdasd@gmail.com', 'asdasd@gmail.com', 'asdasd@gmail.com', '2025-03-13 12:53:18', 'Unopened'),
-(6, 'asdasd@gmail.com', 'asdasd@gmail.com', 'asdasd@gmail.com', '2025-03-13 12:53:21', 'Unopened'),
-(7, 'asdasd@gmail.com', 'asdasd@gmail.com', 'asdasd@gmail.com', '2025-03-13 12:53:26', 'Unopened'),
-(8, 'asdasd@gmail.com', 'asdasd@gmail.com', 'asdasd@gmail.com', '2025-03-13 12:53:30', 'Unopened'),
-(9, 'asdasd@gmail.com', 'asdasd@gmail.com', 'asdasd@gmail.com', '2025-03-13 12:53:34', 'Unopened'),
-(10, 'asdasd@gmail.com', 'asdasd@gmail.com', 'asdasd@gmail.com', '2025-03-13 12:53:45', 'Unopened'),
-(11, 'asdasd@gmail.com', 'asdasd@gmail.com', 'asdasd@gmail.com', '2025-03-13 12:53:49', 'Unopened'),
-(12, 'Hussain Ishan', 'asdasd@gmail.com', 'asdasd', '2025-03-14 12:04:53', 'Unopened'),
-(13, 'Hussain Ishan', 'husish99@gmail.com', 'asdasda', '2025-03-14 12:46:32', 'Unopened'),
-(14, 'Hussain Ishan', 'husish99@gmail.com', 'asdasda', '2025-03-14 12:46:32', 'Closed'),
-(15, 'Hussain Ishan', 'husish99@gmail.com', 'asdasda', '2025-03-14 18:53:10', 'Unopened'),
-(16, 'Hussain Ishan', 'husish99@gmail.com', 'asdasda', '2025-03-14 18:53:10', 'Unopened'),
-(17, 'Hussain Ishan', 'asdasd@gmail.com', 'test', '2025-03-15 00:51:41', 'Unopened'),
-(18, 'Hussain Ishan', 'asdasd@gmail.com', 'test', '2025-03-15 00:51:41', 'Unopened'),
-(19, 'Hussain Ishan', 'asdasd@gmail.com', 'test', '2025-03-15 00:51:46', 'Closed'),
-(20, 'Hussain Ishan', 'asdasd@gmail.com', 'test', '2025-03-15 00:51:46', 'Unopened'),
-(21, 'Hussain Ishan', 'asdasda@gmail.com', 'test2', '2025-03-15 00:53:29', 'Unopened'),
-(22, 'Hussain Ishan', 'asdasda@gmail.com', 'test2', '2025-03-15 00:53:29', 'Unopened'),
-(23, 'Hussain Ishan', 'asdasd@gmail.com', 'asdasd', '2025-03-15 00:53:44', 'Unopened'),
-(24, 'Hussain Ishan', 'asdasd@gmail.com', 'asdasd', '2025-03-15 00:53:44', 'Unopened'),
-(25, 'Hussain Ishan', 'jb19990801@gmail.com', 'asdasd', '2025-03-15 00:54:05', 'Unopened'),
-(26, 'Hussain Ishan', 'jb19990801@gmail.com', 'asdasd', '2025-03-15 00:54:05', 'Unopened'),
-(27, 'Hussain Ishan', 'husish99@gmail.com', 'asdasd', '2025-03-15 00:54:35', 'Unopened'),
-(28, 'Hussain Ishan', 'husish99@gmail.com', 'asdasd', '2025-03-15 00:54:35', 'Unopened'),
-(29, 'Hussain Ishan', 'asdasd@gmail.com', 'asdasd', '2025-03-15 00:55:08', 'Unopened'),
-(30, 'Hussain Ishan', 'asdasd@gmail.com', 'asdasd', '2025-03-15 00:55:08', 'Unopened'),
-(31, 'Hussain Ishan', 'husish99@gmail.com', 'asdasda', '2025-03-15 00:55:59', 'Unopened'),
-(32, 'Hussain Ishan', 'husish99@gmail.com', 'asdasda', '2025-03-15 00:55:59', 'Unopened'),
-(33, 'Hussain Ishan', 'husish99@gmail.com', 'asdasda', '2025-03-15 00:56:06', 'Unopened'),
-(34, 'Hussain Ishan', 'husish99@gmail.com', 'asdasda', '2025-03-15 00:56:06', 'Unopened'),
-(35, 'Hussain Ishan', 'jb19990801@gmail.com', 'asdasd', '2025-03-15 00:56:25', 'Unopened'),
-(36, 'Hussain Ishan', 'jb19990801@gmail.com', 'asdasd', '2025-03-15 00:56:25', 'Unopened'),
-(37, 'Hussain Ishan', 'asdasd@gmail.com', 'asdasda', '2025-03-15 00:57:15', 'Unopened'),
-(38, 'Hussain Ishan', 'asdasd@gmail.com', 'asdasda', '2025-03-15 00:57:15', 'Unopened'),
-(39, 'Hussain Ishan', 'asdasda@gmail.com', 'asdasdasd', '2025-03-15 00:57:30', 'Unopened'),
-(40, 'Hussain Ishan', 'asdasda@gmail.com', 'asdasdasd', '2025-03-15 00:57:30', 'Unopened'),
-(41, 'Hussain Ishan', 'husish99@gmail.com', 'asdasd', '2025-03-15 00:57:52', 'Unopened'),
-(42, 'Hussain Ishan', 'husish99@gmail.com', 'asdasd', '2025-03-15 00:57:52', 'Unopened');
+(52, 'Jane Smith', 'jane.smith@example.com', 'What are your opening hours?', '2025-03-03 12:02:36', 'Closed'),
+(51, 'Chris Taylor', 'chris.taylor@example.com', 'Do you offer vegetarian options?', '2025-03-11 12:02:36', 'Unopened'),
+(50, 'Laura Moore', 'laura.moore@example.com', 'I have a question about the menu.', '2025-02-18 12:02:36', 'In Process'),
+(49, 'Sarah Miller', 'sarah.miller@example.com', 'Can I modify my reservation date?', '2025-03-20 12:02:36', 'Closed'),
+(48, 'Laura Moore', 'laura.moore@example.com', 'Can I modify my reservation date?', '2025-03-06 12:02:36', 'Unopened'),
+(47, 'Jane Smith', 'jane.smith@example.com', 'What payment methods do you accept?', '2025-02-20 12:02:36', 'Unopened'),
+(46, 'Laura Moore', 'laura.moore@example.com', 'Can I modify my reservation date?', '2025-02-28 12:02:36', 'Closed'),
+(45, 'Jane Smith', 'jane.smith@example.com', 'I encountered an issue while booking a table.', '2025-03-05 12:02:36', 'In Process'),
+(44, 'Emily Davis', 'emily.davis@example.com', 'Is your restaurant wheelchair accessible?', '2025-02-19 12:02:36', 'In Process'),
+(43, 'Michael Brown', 'michael.brown@example.com', 'Do you provide catering services?', '2025-03-06 12:02:36', 'In Process');
 
 -- --------------------------------------------------------
 
@@ -167,10 +126,10 @@ INSERT INTO `inqueries` (`MessageID`, `Name`, `Email`, `Message`, `CreatedAt`, `
 DROP TABLE IF EXISTS `menu`;
 CREATE TABLE IF NOT EXISTS `menu` (
   `MenuItemID` int NOT NULL AUTO_INCREMENT,
-  `Name` varchar(255) NOT NULL,
-  `Description` text,
+  `Name` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `Description` text COLLATE utf8mb4_general_ci,
   `Price` decimal(10,2) NOT NULL,
-  `Image` text,
+  `Image` text COLLATE utf8mb4_general_ci,
   `CategoryID` int DEFAULT NULL,
   `SubcategoryID` int DEFAULT NULL,
   PRIMARY KEY (`MenuItemID`),
@@ -212,40 +171,33 @@ DROP TABLE IF EXISTS `orders`;
 CREATE TABLE IF NOT EXISTS `orders` (
   `OrderID` int NOT NULL AUTO_INCREMENT,
   `CustomerID` int DEFAULT NULL,
-  `OrderDetails` text NOT NULL,
+  `OrderDetails` text COLLATE utf8mb4_general_ci NOT NULL,
   `TotalPrice` decimal(10,2) NOT NULL,
-  `CreditCardLast4` char(4) NOT NULL,
+  `CreditCardLast4` char(4) COLLATE utf8mb4_general_ci NOT NULL,
   `OrderDate` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`OrderID`)
-) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=38 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `orders`
 --
 
 INSERT INTO `orders` (`OrderID`, `CustomerID`, `OrderDetails`, `TotalPrice`, `CreditCardLast4`, `OrderDate`) VALUES
-(1, 7, 'Lasagna di San Gimignano x 1, Summer Spaghetti x 1, Buffalo Mozzarella Pizza x 1', 54.99, '1254', '2025-03-12 13:59:19'),
-(2, 7, 'Summer Spaghetti x 1, Lasagna di San Gimignano x 1, Buffalo Mozzarella Pizza x 1', 54.99, '3652', '2025-03-12 13:59:59'),
-(3, 21, 'Summer Spaghetti x 1, Lasagna di San Gimignano x 1, Buffalo Mozzarella Pizza x 1', 59.99, '7458', '2025-03-13 18:02:22'),
-(4, 13, 'Lasagna di San Gimignano x 1, Tiramisu x 2', 31.37, '8187', '2024-05-12 21:00:00'),
-(5, 13, 'Buffalo Mozzarella Pizza x 1, Gelato x 1', 32.04, '1397', '2024-10-24 21:00:00'),
-(6, 17, 'Summer Spaghetti x 1, Tiramisu x 2', 11.85, '6308', '2024-08-17 21:00:00'),
-(7, 4, 'Buffalo Mozzarella Pizza x 1, Tiramisu x 2', 22.70, '3630', '2024-11-24 22:00:00'),
-(8, 4, 'Buffalo Mozzarella Pizza x 1, Tiramisu x 2', 32.48, '6881', '2025-02-09 22:00:00'),
-(9, 20, 'Lasagna di San Gimignano x 1, Gelato x 1', 29.47, '5895', '2024-05-06 21:00:00'),
-(10, 16, 'Buffalo Mozzarella Pizza x 1, Tiramisu x 2', 23.97, '5861', '2024-11-21 22:00:00'),
-(11, 15, 'Lasagna di San Gimignano x 1, Gelato x 1', 24.97, '3099', '2024-05-11 21:00:00'),
-(12, 17, 'Barolo Red Wine x 1, Tiramisu x 2', 9.88, '5215', '2025-01-02 22:00:00'),
-(13, 20, 'Buffalo Mozzarella Pizza x 1, Tiramisu x 2', 9.94, '7650', '2024-10-17 21:00:00'),
-(14, 1, 'Eggnog Cheesecake x 1, Lasagna di San Gimignano x 1, Buffalo Mozzarella Pizza x 1', 44.99, '2563', '2025-03-14 16:18:50'),
-(15, 1, 'Summer Spaghetti x 1, Lasagna di San Gimignano x 1', 50.00, '4585', '2025-03-14 18:47:22'),
-(16, 27, 'Summer Spaghetti x 1, Lasagna di San Gimignano x 1', 50.00, '1212', '2025-03-15 00:42:28'),
-(17, 27, 'Lasagna di San Gimignano x 1', 25.00, '1212', '2025-03-15 00:44:51'),
-(18, 27, 'Lasagna di San Gimignano x 2', 50.00, '1212', '2025-03-15 00:45:16'),
-(19, 1, 'Buffalo Mozzarella Pizza x 1', 9.99, '1236', '2025-03-15 14:23:20'),
-(20, 1, 'Lasagna di San Gimignano x 1', 25.00, '1236', '2025-03-15 14:23:37'),
-(21, 1, 'Buffalo Mozzarella Pizza x 2', 19.98, '1236', '2025-03-15 14:23:54'),
-(22, 1, 'Lasagna di San Gimignano x 1', 25.00, '1236', '2025-03-15 14:24:12');
+(36, 15, 'Barolo Red Wine (x1), Spaghetti Carbonara (x3), Panna Cotta (x1)', 59.97, '7147', '2025-03-03 12:06:49'),
+(35, 16, 'Summer Spaghetti (x2), Bruschetta (x2)', 67.97, '5732', '2025-03-04 12:06:49'),
+(33, 29, 'Barolo Red Wine (x2)', 11.98, '4423', '2025-03-18 12:06:49'),
+(34, 16, 'Panna Cotta (x1), Italian Hot Chocolate (x1), Gelato (x3)', 48.97, '4280', '2025-03-05 12:06:49'),
+(32, 18, 'Barolo Red Wine (x2)', 17.97, '1475', '2025-03-04 12:06:49'),
+(31, 14, 'Eggnog Cheesecake (x2), Coca Cola 1.5 Liter (x1), Fettuccine Alfredo (x2)', 47.99, '2173', '2025-02-28 12:06:49'),
+(30, 10, 'Bruschetta (x2), Buffalo Mozzarella Pizza (x1), Panna Cotta (x1), Eggnog Cheesecake (x3)', 85.95, '8267', '2025-03-11 12:06:49'),
+(29, 29, 'Lasagna di San Gimignano (x1)', 25.00, '9788', '2025-02-24 12:06:49'),
+(28, 16, 'Barolo Red Wine (x2), Holiday Bitter Greens Salad (x3), Eggnog Cheesecake (x3), Caprese Salad (x2)', 67.97, '4666', '2025-02-24 12:06:49'),
+(27, 13, 'Barolo Red Wine (x1), Risotto alla Milanese (x2), Fettuccine Alfredo (x2), Lasagna di San Gimignano (x2)', 98.94, '7264', '2025-02-20 12:06:49'),
+(26, 11, 'Risotto alla Milanese (x2)', 50.97, '9813', '2025-03-11 12:06:49'),
+(25, 18, 'Italian Hot Chocolate (x2), Coca Cola 1.5 Liter (x3), Margherita Pizza (x3), Caprese Salad (x3)', 76.99, '4439', '2025-02-28 12:06:49'),
+(24, 15, 'Spaghetti Carbonara (x1), Eggnog Cheesecake (x2), Lasagna Bolognese (x1), Holiday Bitter Greens Salad (x1)', 99.96, '2737', '2025-03-01 12:06:49'),
+(23, 14, 'Lasagna di San Gimignano (x1), Panna Cotta (x3), Risotto alla Milanese (x3)', 57.99, '2695', '2025-03-20 12:06:49'),
+(37, 17, 'Italian Hot Chocolate (x3), Bruschetta (x3), Eggnog Cheesecake (x1), Gelato (x2)', 56.95, '8297', '2025-02-22 12:06:49');
 
 -- --------------------------------------------------------
 
@@ -256,38 +208,42 @@ INSERT INTO `orders` (`OrderID`, `CustomerID`, `OrderDetails`, `TotalPrice`, `Cr
 DROP TABLE IF EXISTS `reservations`;
 CREATE TABLE IF NOT EXISTS `reservations` (
   `ReservationID` int NOT NULL AUTO_INCREMENT,
-  `CustomerName` varchar(255) NOT NULL,
-  `CustomerEmail` varchar(255) NOT NULL,
-  `CustomerPhone` varchar(255) NOT NULL,
+  `CustomerName` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `CustomerEmail` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `CustomerPhone` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
   `ReservationDate` date NOT NULL,
   `ReservationTime` time NOT NULL,
   `NumberOfPeople` int NOT NULL,
-  `SpecialRequest` text,
+  `SpecialRequest` text COLLATE utf8mb4_general_ci,
   `CreatedAt` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`ReservationID`)
-) ENGINE=MyISAM AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=47 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `reservations`
 --
 
 INSERT INTO `reservations` (`ReservationID`, `CustomerName`, `CustomerEmail`, `CustomerPhone`, `ReservationDate`, `ReservationTime`, `NumberOfPeople`, `SpecialRequest`, `CreatedAt`) VALUES
-(5, 'Hussain Ishan', 'husish9292@gmail.com', '0549307362', '2025-03-26', '21:27:00', 85, '', '2025-03-12 14:24:31'),
-(7, 'Hussain Ishan', 'Hussish66@gmail.com', '0549307362', '2025-03-27', '12:07:00', 2, '', '2025-03-13 18:02:54'),
-(8, 'Bob Smith', 'bob.smith@example.com', '555-8467', '2025-04-10', '05:07:01', 3, 'Window seat requested', '2025-03-13 18:21:03'),
-(9, 'Bob Smith12', 'bob.smith@example.com', '0526987854', '2025-03-26', '23:33:16', 6, 'No special request', '2025-03-13 18:21:03'),
-(10, 'Bob Smith', 'bob.smith@example.com', '555-9594', '2025-03-26', '08:18:26', 4, 'No special request', '2025-03-13 18:21:03'),
-(11, 'Charlie Brown', 'bob.smith@example.com', '555-9966', '2025-04-04', '18:22:35', 6, 'No special request', '2025-03-13 18:21:03'),
-(12, 'Alice Johnson', 'alice.johnson@example.com', '555-9731', '2025-03-30', '23:58:15', 3, 'Window seat requested', '2025-03-13 18:21:03'),
-(13, 'Bob Smith', 'bob.smith@example.com', '555-2936', '2025-03-19', '03:42:15', 2, 'Window seat requested', '2025-03-13 18:21:03'),
-(14, 'Bob Smith', 'charlie.brown@example.com', '555-8170', '2025-04-08', '22:20:43', 1, 'Window seat requested', '2025-03-13 18:21:03'),
-(19, 'Hussain Ishan', 'jb19990801@gmail.com', '0549307362', '2025-03-19', '19:39:00', 2, '', '2025-03-14 13:36:41'),
-(16, 'Alice Johnson', 'charlie.brown@example.com', '555-6762', '2025-03-24', '22:01:05', 5, 'Window seat requested', '2025-03-13 18:21:03'),
-(17, 'Bob Smith', 'alice.johnson@example.com', '555-5538', '2025-03-28', '20:12:47', 8, 'Window seat requested', '2025-03-13 18:21:03'),
-(20, 'dawood', 'dawood@gmail.com', '0549396362', '2025-03-19', '20:48:00', 10, '', '2025-03-14 13:43:21'),
-(21, 'Hussain Ishan', 'asdasd@gmail.com', '0549307362', '2025-03-25', '23:51:00', 2, '', '2025-03-14 18:51:27'),
-(22, 'Hussain Ishan', 'asdasd@gmail.com', '0549307362', '2025-03-25', '23:51:00', 2, '', '2025-03-14 18:52:07'),
-(24, 'Hussain Ishan', 'asdasda@gmail.com', '0549307362', '2025-03-20', '05:51:00', 4, '', '2025-03-15 00:48:58');
+(36, 'Olivia Noob', 'OlivaNoob@gmail.com', '901-234-5678', '2025-03-29', '21:00:00', 6, 'Near the window, please.', '2025-03-20 12:10:04'),
+(35, 'Chris Taylor', 'chris.taylor@example.com', '890-123-4567', '2025-04-10', '21:00:00', 2, 'Vegetarian options only.', '2025-03-20 12:10:04'),
+(34, 'William Carter', 'william.carter@example.com', '666-777-8888', '2025-03-22', '18:00:00', 5, 'Large group seating needed.', '2025-03-20 12:10:04'),
+(33, 'John Doe', 'john.doe@example.com', '123-456-7890', '2025-03-29', '19:00:00', 4, 'Celebrating a birthday.', '2025-03-20 12:10:04'),
+(32, 'Jane Smith', 'jane.smith@example.com', '234-567-8901', '2025-04-17', '19:00:00', 1, 'Quiet table preferred.', '2025-03-20 12:10:04'),
+(31, 'Robert White', 'robert.white@example.com', '222-333-4444', '2025-03-25', '18:00:00', 5, 'Near the window, please.', '2025-03-20 12:10:04'),
+(30, 'Jane Smith', 'jane.smith@example.com', '234-567-8901', '2025-03-31', '18:00:00', 3, 'Allergic to nuts.', '2025-03-20 12:10:04'),
+(29, 'Olivia Noob', 'OlivaNoob@gmail.com', '901-234-5678', '2025-04-07', '19:00:00', 4, 'Need a high chair for a baby.', '2025-03-20 12:10:04'),
+(28, 'James Black', 'james.black@example.com', '444-555-6666', '2025-04-14', '18:00:00', 3, 'Gluten-free meal requested.', '2025-03-20 12:10:04'),
+(27, 'Robert White', 'robert.white@example.com', '222-333-4444', '2025-03-31', '19:00:00', 6, 'Quiet table preferred.', '2025-03-20 12:10:04'),
+(37, 'Alice Johnson', 'alice.johnson@example.com', '111-222-3333', '2025-04-18', '18:00:00', 3, 'Vegetarian options only.', '2025-03-20 12:10:04'),
+(38, 'Emma King', 'emma.king@example.com', '555-666-7777', '2025-03-27', '19:00:00', 1, 'Near the window, please.', '2025-03-20 12:10:04'),
+(39, 'Emily Davis', 'emily.davis@example.com', '345-678-9012', '2025-04-01', '21:00:00', 6, 'No special requests.', '2025-03-20 12:10:04'),
+(40, 'Laura Moore', 'laura.moore@example.com', '789-012-3456', '2025-03-22', '20:00:00', 6, 'No special requests.', '2025-03-20 12:10:04'),
+(41, 'Daniel Foster', 'daniel.foster@example.com', '000-111-2222', '2025-04-11', '18:00:00', 2, 'Large group seating needed.', '2025-03-20 12:10:04'),
+(42, 'Alice Johnson', 'alice.johnson@example.com', '111-222-3333', '2025-03-24', '21:00:00', 5, 'Large group seating needed.', '2025-03-20 12:10:04'),
+(43, 'Olivia Noob', 'OlivaNoob@gmail.com', '901-234-5678', '2025-04-07', '20:00:00', 4, 'Allergic to nuts.', '2025-03-20 12:10:04'),
+(44, 'William Carter', 'william.carter@example.com', '666-777-8888', '2025-04-10', '21:00:00', 6, 'Celebrating a birthday.', '2025-03-20 12:10:04'),
+(45, 'Emma King', 'emma.king@example.com', '555-666-7777', '2025-04-19', '21:00:00', 1, 'Quiet table preferred.', '2025-03-20 12:10:04'),
+(46, 'David Wilson', 'david.wilson@example.com', '678-901-2345', '2025-04-18', '19:00:00', 3, 'Gluten-free meal requested.', '2025-03-20 12:10:04');
 
 -- --------------------------------------------------------
 
@@ -298,11 +254,11 @@ INSERT INTO `reservations` (`ReservationID`, `CustomerName`, `CustomerEmail`, `C
 DROP TABLE IF EXISTS `subcategories`;
 CREATE TABLE IF NOT EXISTS `subcategories` (
   `SubcategoryID` int NOT NULL AUTO_INCREMENT,
-  `SubcategoryName` varchar(255) NOT NULL,
+  `SubcategoryName` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
   `CategoryID` int DEFAULT NULL,
   PRIMARY KEY (`SubcategoryID`),
   KEY `CategoryID` (`CategoryID`)
-) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;;
+) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `subcategories`
