@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="base-url" content="/project/">
+  <title>Reservation - La Dolce Vita</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <style>
+     body {
+      background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      color: #333;
+    }
+    .reservation-container {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+    .reservation-form {
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      width: 100%;
+    }
+    .reservation-form h1 {
+      margin-bottom: 30px;
+      font-weight: bold;
+      text-align: center;
+    }
+    .reservation-form .form-group label {
+      font-weight: 500;
+    }
+    .reservation-form .form-control {
+      border-radius: 5px;
+    }
+    .reservation-form button.btn-primary {
+      border-radius: 30px;
+      font-size: 1.1rem;
+      padding: 10px 0;
+      transition: background-color 0.3s ease;
+    }
+    .reservation-form button.btn-primary:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div id="navbar">
+    <!--navigation bar will be fetched here dynamically using an ajax script in scripts.js-->
+  </div>
+  
+  <div class="container reservation-container">
+    <div class="reservation-form">
+      <h1 class="text-center">Make a Reservation</h1>
+      <!--this form will redirect to the reserve_table route apon submission-->
+      <form action="index.php?page=reserve_table" method="POST">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" class="form-control" id="name" name="name" placeholder="Your full name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="text" class="form-control" id="phone" name="phone" placeholder="(xxx) xxx-xxxx" required>
+        </div>
+        <div class="form-group">
+          <label for="date">Reservation Date</label>
+          <input type="date" class="form-control" id="date" name="date" required>
+        </div>
+        <div class="form-group">
+          <label for="time">Reservation Time</label>
+          <input type="time" class="form-control" id="time" name="time" required>
+        </div>
+        <div class="form-group">
+          <label for="people">Number of People</label>
+          <input type="number" class="form-control" id="people" name="people" required min="1">
+        </div>
+        <div class="form-group">
+          <label for="special_requests">Special Requests</label>
+          <textarea class="form-control" id="special_requests" name="special_requests" rows="3" placeholder="Any special requests?"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Submit Reservation</button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container text-center">
+        <p>&copy; 2024 La Dolce Vita. All rights Reserved. </p>
+    </div>
+  </footer>
+  
+  <script src="/assets/js/scripts.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+</body>
+</html>

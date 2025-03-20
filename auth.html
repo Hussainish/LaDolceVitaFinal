@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="base-url" content="/project/">
+  <title>Login and Sign Up - La Dolce Vita</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <style>
+     
+    /* Container to use full page size and center the login/signup card */
+    .auth-container {
+      min-height: 100vh;
+      background-color: #f8f9fa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    /* card like container for login/signup */
+    .auth-box {
+      background-color: #fff;
+      padding: 40px;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 500px;
+    }
+    .auth-box h2 {
+      margin-bottom: 30px;
+      font-weight: bold;
+      color: #333;
+      text-align: center;
+    }
+    /* nav tabs - basically the signup and login tabs inside the card */
+    .nav-tabs .nav-link {
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #555;
+    }
+    .nav-tabs .nav-link.active {
+      color: #007bff;
+      border-color: #007bff;
+    }
+    .nav-tabs {
+      margin-bottom: 20px;
+    }
+    /* making the buttons full width */
+    .btn-block {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header id="navbar">
+  
+  
+  </header>
+
+  <div class="container auth-container">
+    <div class="auth-box">
+      <!-- nav tabs -->
+      <ul class="nav nav-tabs" id="authTab" role="tablist">
+        <!--Log in tab-->
+        <li class="nav-item">
+          <a class="nav-link active" id="login-tab" data-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="true">Log In</a>
+        </li>
+        <!--Sign up tab-->
+        <li class="nav-item">
+          <a class="nav-link" id="signup-tab" data-toggle="tab" href="#signup" role="tab" aria-controls="signup" aria-selected="false">Sign Up</a>
+        </li>
+      </ul>
+      <!-- Those are the tab panes - where the tab contents are. -->
+      <div class="tab-content" id="authTabContent">
+        <!-- Log In tab content - basically the log in form - -->
+        <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+          <h2>Log In</h2>
+          <form action="index.php?page=login" method="post" id="login-form">
+            <div class="form-group">
+              <label for="username-login">Username:</label>
+              <input type="text" class="form-control" id="username-login" name="username" required>
+            </div>
+            <div class="form-group">
+              <label for="password-login">Password:</label>
+              <input type="password" class="form-control" id="password-login" name="password" required>
+            </div>
+            <!--The button triggers the login proccess from index.php as the form action is redirecting to index.php login route -->
+            <button type="submit" class="btn btn-primary btn-block">Log In</button>
+          </form>
+        </div>
+        <!-- Sign Up tab - basically the sign up form -->
+        <div class="tab-pane fade" id="signup" role="tabpanel" aria-labelledby="signup-tab">
+          <h2>Sign Up</h2>
+          <form action="index.php?page=signup" method="post" id="signup-form">
+            <div class="form-group">
+              <label for="Fname">First Name:</label>
+              <input type="text" class="form-control" id="Fname" name="Fname" required>
+            </div>
+            <div class="form-group">
+              <label for="Lname">Last Name:</label>
+              <input type="text" class="form-control" id="Lname" name="Lname" required>
+            </div>
+            <div class="form-group">
+              <label for="username">Username:</label>
+              <input type="text" class="form-control" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="password">Password:</label>
+              <input type="password" class="form-control" id="password" name="password" required>
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="terms" name="terms" required>
+              <label class="form-check-label" for="terms">By Signing Up You Agree to our <a href="termspage.html" target="_blank">Terms of Use</a></label>
+            </div>
+            <!--The button triggers the sign up proccess from index.php as the form action is redirecting to index.php signup route -->
+            <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal to handle and show error messages in case of wrong credintails or an existing account during signup and other errors -->
+  <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="errorModalLabel">Error</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <!--Error message will appear here-->
+        <div class="modal-body" id="errorMessage"></div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container text-center">
+        <p>&copy; 2024 La Dolce Vita. All rights Reserved. </p>
+    </div>
+  </footer>
+
+  <script src="/assets/js/scripts.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    /* this script will display an error in the error modal in case of an error
+    during sign up or login, first it will load the error message and then show the modal. */
+    document.addEventListener("DOMContentLoaded", function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const signupError = urlParams.get('signup_error');
+      const loginError = urlParams.get('login_error');
+      if (signupError || loginError) {
+        const errorMessageElement = document.getElementById('errorMessage');
+        if (signupError) {
+          errorMessageElement.textContent = signupError;
+        }
+        if (loginError) {
+          errorMessageElement.textContent = loginError;
+        }
+        $('#errorModal').modal('show');
+      }
+    });
+  </script>
+
+  <script src="/assets/js/auth.js"></script>
+</body>
+</html>

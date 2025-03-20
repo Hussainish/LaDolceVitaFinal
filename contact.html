@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="base-url" content="/project/">
+  <title>Contact Us - La Dolce Vita</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <style>
+     
+    /* background and full page conainer custom css */
+    .contact-container {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    /* card like box for the contact form */
+    .contact-box {
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 600px;
+    }
+    .contact-box h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+    .contact-box label {
+      font-weight: 500;
+    }
+    .contact-box .btn-primary {
+      width: 100%;
+      font-size: 1.1rem;
+      padding: 10px;
+    }
+    /* some styling for the modal  */
+    .modal-header, .modal-footer {
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <header id="navbar">
+    
+  </header>
+  
+  <div class="contact-container">
+    <!--this is the form container-->
+    <div class="contact-box">
+      <h2>Contact Us</h2>
+      <!--here is the form, the form action will trigger the send_message route once the form is submitted-->
+      <form action="index.php?page=send_message" method="post">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea class="form-control" id="message" name="message" rows="5" placeholder="Your message here..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+ 
+  
+  <!-- Error modal will show error apon submission if there is an error.-->
+  <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="errorModalLabel">Error</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <!--error will be displayed here-->
+        <div class="modal-body" id="errorMessage">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- success modal -->
+  <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="successModalLabel">Success</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <!--success modal will show a success message apon form submission.-->
+        <div class="modal-body" id="successMessage">
+          Your message has been sent successfully.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    /*once the form is submitted this function will check if the submission was successful
+    and if it was it will search for the modal and show it up. */
+    document.addEventListener("DOMContentLoaded", function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const success = urlParams.get('success');
+      if (success) { // it will show the modal only if the parameter success is true - basically if the form got submitted successfully.
+        const successModal = new bootstrap.Modal(document.getElementById('successModal'));
+        successModal.show();
+      }
+    });
+
+    /*and here in this function once the form is submitted it will check if there is an error message
+    if there is an error message it will look for the modal by its id and then load up the message and show it to the user. */
+    document.addEventListener("DOMContentLoaded", function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const error = urlParams.get('error');
+      if (error) { // again here it ensures that the user sees the modal only if there is an error.
+        const errorMessageElement = document.getElementById('errorMessage');
+        errorMessageElement.textContent = error;
+        const errorModal = new bootstrap.Modal(document.getElementById('errorModal'));
+        errorModal.show();
+      }
+    });
+  </script>
+  
+  <footer class="footer">
+    <div class="container text-center">
+        <p>&copy; 2024 La Dolce Vita. All rights Reserved. </p>
+    </div>
+  </footer>
+  <script src="/assets/js/scripts.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+</body>
+</html>
