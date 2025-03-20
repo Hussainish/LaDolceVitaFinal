@@ -224,26 +224,26 @@ CREATE TABLE IF NOT EXISTS `reservations` (
 --
 
 INSERT INTO `reservations` (`ReservationID`, `CustomerName`, `CustomerEmail`, `CustomerPhone`, `ReservationDate`, `ReservationTime`, `NumberOfPeople`, `SpecialRequest`, `CreatedAt`) VALUES
-(36, 'Olivia Noob', 'OlivaNoob@gmail.com', '901-234-5678', '2025-03-29', '21:00:00', 6, 'Near the window, please.', '2025-03-20 12:10:04'),
-(35, 'Chris Taylor', 'chris.taylor@example.com', '890-123-4567', '2025-04-10', '21:00:00', 2, 'Vegetarian options only.', '2025-03-20 12:10:04'),
-(34, 'William Carter', 'william.carter@example.com', '666-777-8888', '2025-03-22', '18:00:00', 5, 'Large group seating needed.', '2025-03-20 12:10:04'),
-(33, 'John Doe', 'john.doe@example.com', '123-456-7890', '2025-03-29', '19:00:00', 4, 'Celebrating a birthday.', '2025-03-20 12:10:04'),
-(32, 'Jane Smith', 'jane.smith@example.com', '234-567-8901', '2025-04-17', '19:00:00', 1, 'Quiet table preferred.', '2025-03-20 12:10:04'),
-(31, 'Robert White', 'robert.white@example.com', '222-333-4444', '2025-03-25', '18:00:00', 5, 'Near the window, please.', '2025-03-20 12:10:04'),
-(30, 'Jane Smith', 'jane.smith@example.com', '234-567-8901', '2025-03-31', '18:00:00', 3, 'Allergic to nuts.', '2025-03-20 12:10:04'),
-(29, 'Olivia Noob', 'OlivaNoob@gmail.com', '901-234-5678', '2025-04-07', '19:00:00', 4, 'Need a high chair for a baby.', '2025-03-20 12:10:04'),
-(28, 'James Black', 'james.black@example.com', '444-555-6666', '2025-04-14', '18:00:00', 3, 'Gluten-free meal requested.', '2025-03-20 12:10:04'),
-(27, 'Robert White', 'robert.white@example.com', '222-333-4444', '2025-03-31', '19:00:00', 6, 'Quiet table preferred.', '2025-03-20 12:10:04'),
-(37, 'Alice Johnson', 'alice.johnson@example.com', '111-222-3333', '2025-04-18', '18:00:00', 3, 'Vegetarian options only.', '2025-03-20 12:10:04'),
-(38, 'Emma King', 'emma.king@example.com', '555-666-7777', '2025-03-27', '19:00:00', 1, 'Near the window, please.', '2025-03-20 12:10:04'),
-(39, 'Emily Davis', 'emily.davis@example.com', '345-678-9012', '2025-04-01', '21:00:00', 6, 'No special requests.', '2025-03-20 12:10:04'),
-(40, 'Laura Moore', 'laura.moore@example.com', '789-012-3456', '2025-03-22', '20:00:00', 6, 'No special requests.', '2025-03-20 12:10:04'),
-(41, 'Daniel Foster', 'daniel.foster@example.com', '000-111-2222', '2025-04-11', '18:00:00', 2, 'Large group seating needed.', '2025-03-20 12:10:04'),
-(42, 'Alice Johnson', 'alice.johnson@example.com', '111-222-3333', '2025-03-24', '21:00:00', 5, 'Large group seating needed.', '2025-03-20 12:10:04'),
-(43, 'Olivia Noob', 'OlivaNoob@gmail.com', '901-234-5678', '2025-04-07', '20:00:00', 4, 'Allergic to nuts.', '2025-03-20 12:10:04'),
-(44, 'William Carter', 'william.carter@example.com', '666-777-8888', '2025-04-10', '21:00:00', 6, 'Celebrating a birthday.', '2025-03-20 12:10:04'),
-(45, 'Emma King', 'emma.king@example.com', '555-666-7777', '2025-04-19', '21:00:00', 1, 'Quiet table preferred.', '2025-03-20 12:10:04'),
-(46, 'David Wilson', 'david.wilson@example.com', '678-901-2345', '2025-04-18', '19:00:00', 3, 'Gluten-free meal requested.', '2025-03-20 12:10:04');
+(36, 'Olivia Noob', 'OlivaNoob@gmail.com', '0536336587', '2025-03-29', '21:00:00', 6, 'Near the window, please.', '2025-03-20 12:10:04'),
+(35, 'Chris Taylor', 'chris.taylor@example.com', '0536369899', '2025-04-10', '21:00:00', 2, 'Vegetarian options only.', '2025-03-20 12:10:04'),
+(34, 'William Carter', 'william.carter@example.com', '0536989968', '2025-03-22', '18:00:00', 5, 'Large group seating needed.', '2025-03-20 12:10:04'),
+(33, 'John Doe', 'john.doe@example.com', '0549893632', '2025-03-29', '19:00:00', 4, 'Celebrating a birthday.', '2025-03-20 12:10:04'),
+(32, 'Jane Smith', 'jane.smith@example.com', '0587854585', '2025-04-17', '19:00:00', 1, 'Quiet table preferred.', '2025-03-20 12:10:04'),
+(31, 'Robert White', 'robert.white@example.com', '0522269325', '2025-03-25', '18:00:00', 5, 'Near the window, please.', '2025-03-20 12:10:04'),
+(30, 'Jane Smith', 'jane.smith@example.com', '0587854585', '2025-03-31', '18:00:00', 3, 'Allergic to nuts.', '2025-03-20 12:10:04'),
+(29, 'Olivia Noob', 'OlivaNoob@gmail.com', '0536336587', '2025-04-07', '19:00:00', 4, 'Need a high chair for a baby.', '2025-03-20 12:10:04'),
+(28, 'James Black', 'james.black@example.com', '0543631212', '2025-04-14', '18:00:00', 3, 'Gluten-free meal requested.', '2025-03-20 12:10:04'),
+(27, 'Robert White', 'robert.white@example.com', '0522269325', '2025-03-31', '19:00:00', 6, 'Quiet table preferred.', '2025-03-20 12:10:04'),
+(37, 'Alice Johnson', 'alice.johnson@example.com', '0549362125', '2025-04-18', '18:00:00', 3, 'Vegetarian options only.', '2025-03-20 12:10:04'),
+(38, 'Emma King', 'emma.king@example.com', '0586984587', '2025-03-27', '19:00:00', 1, 'Near the window, please.', '2025-03-20 12:10:04'),
+(39, 'Emily Davis', 'emily.davis@example.com', '0542125453', '2025-04-01', '21:00:00', 6, 'No special requests.', '2025-03-20 12:10:04'),
+(40, 'Laura Moore', 'laura.moore@example.com', '0536981224', '2025-03-22', '20:00:00', 6, 'No special requests.', '2025-03-20 12:10:04'),
+(41, 'Daniel Foster', 'daniel.foster@example.com', '0533336598', '2025-04-11', '18:00:00', 2, 'Large group seating needed.', '2025-03-20 12:10:04'),
+(42, 'Alice Johnson', 'alice.johnson@example.com', '0549362125', '2025-03-24', '21:00:00', 5, 'Large group seating needed.', '2025-03-20 12:10:04'),
+(43, 'Olivia Noob', 'OlivaNoob@gmail.com', '0536336587', '2025-04-07', '20:00:00', 4, 'Allergic to nuts.', '2025-03-20 12:10:04'),
+(44, 'William Carter', 'william.carter@example.com', '0536989968', '2025-04-10', '21:00:00', 6, 'Celebrating a birthday.', '2025-03-20 12:10:04'),
+(45, 'Emma King', 'emma.king@example.com', '0586984587', '2025-04-19', '21:00:00', 1, 'Quiet table preferred.', '2025-03-20 12:10:04'),
+(46, 'David Wilson', 'david.wilson@example.com', '0588899632', '2025-04-18', '19:00:00', 3, 'Gluten-free meal requested.', '2025-03-20 12:10:04');
 
 -- --------------------------------------------------------
 
