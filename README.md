@@ -24,12 +24,12 @@ The website is currently **deployed** and available for a live demo at: **[La Do
    ```sh
    git clone https://github.com/Hussainish/LaDolceVitaFinal.git
    ```
-2.**Rename Project Directory** : Make sure to name the project folder whatever suits you or you can keep the same name it has.
+2. **Rename Project Directory** : Make sure to name the project folder whatever suits you or you can keep the same name it has.
 3. **Setup Database**:
    - Import the `database.sql` file from the `db` directory into MySQL or you can run DB.php once for minimal dabase creation.
    - Update the `config/config.php` file with your database credentials.
 
-3. **Run the Project Locally**:
+4. **Run the Project Locally**:
    - Install a local server like **XAMPP** or **WampServer**.
    - Place the project in the server directory (e.g., `htdocs` for XAMPP and `www` for wampserver).
    - Start Apache and MySQL (in case you're using wampserver simply run wampserver on your machine) .
@@ -39,12 +39,10 @@ The website is currently **deployed** and available for a live demo at: **[La Do
 The project is already deployed at **[La Dolce Vita](https://www.ladolcevitabyhussain.com/)**.
 
 
-
-
 ## License
 This project is for demonstration purposes only. Images used in the project have been replaced to avoid copyright issues.
 
----
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 For further inquiries, feel free to contact me!
 
