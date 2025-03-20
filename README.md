@@ -20,26 +20,24 @@ The website is currently **deployed** and available for a live demo at: **[La Do
 - **Database**: MySQL (hosted locally or on a server)
 
 ## Installation
-1. **Clone the Repository**:
+1. **Clone the Repository**: 
    ```sh
    git clone https://github.com/Hussainish/LaDolceVitaFinal.git
    ```
-   2.**Rename Project Directory** : Make sure to name the project folder whatever suits you or you can keep the same name it has.
+2. **Rename Project Directory** : Make sure to name the project folder whatever suits you or you can keep the same name it has.
 3. **Setup Database**:
    - Import the `restaurant.sql` file from the `db` directory into MySQL or you can run `DB.php` once for minimal dabase creation - if you want you can update the database name in `DB.php` so that the newly created database will have the name you want.
    - In case you are using wampserver, you can create a database in `phpmyadmin` and then import `restaurant.sql` from the `db` directory.
    - Update the `config/config.php` file with your database credentials.
-
 3. **Run the Project Locally**:
    - Install a local server like **XAMPP** or **WampServer**.
    - Place the project in the server directory (e.g., `htdocs` for XAMPP and `www` for wampserver).
    - Start Apache and MySQL (in case you're using wampserver simply run wampserver on your machine) .
    - Access the site at `http://localhost/LaDolceVitaFinal` in case you kept the folder name or `http://localhost/yourfoldername` in case you changed it.
 
+
 ## Deployment
 The project is already deployed at **[La Dolce Vita](https://www.ladolcevitabyhussain.com/)**.
-
-
 
 
 ## License
