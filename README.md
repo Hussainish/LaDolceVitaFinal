@@ -22,7 +22,7 @@ The website is currently **deployed** and available for a live demo at: **[La Do
 ## Installation
 1. **Clone the Repository**:
    ```sh
-   git clone 
+   git clone https://github.com/Hussainish/LaDolceVitaFinal.git
    ```
 2.**Rename Project Directory** : Make sure to name the project folder whatever suits you or you can keep the same name it has.
 3. **Setup Database**:
@@ -37,6 +37,12 @@ The website is currently **deployed** and available for a live demo at: **[La Do
 
 ## Deployment
 The project is already deployed at **[La Dolce Vita](https://www.ladolcevitabyhussain.com/)**.
+
+### Demo Admin Credentials
+- **URL:** [Admin Panel](https://ladolcevitabyhussain.com/admin)
+- **Username:** admin
+- **Password:** Admin1
+- Please use these Credintails only to test admin functionalities.
 
 
 ## License
