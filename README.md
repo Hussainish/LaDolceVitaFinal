@@ -40,9 +40,7 @@ The project is already deployed at **[La Dolce Vita](https://www.ladolcevitabyhu
 
 ### Demo Admin Credentials
 - **URL:** [Admin Panel](https://ladolcevitabyhussain.com/admin)
-- **Username:** admin
-- **Password:** Admin1
-- Please use these Credintails only to test admin functionalities.
+
 
 
 ## License
