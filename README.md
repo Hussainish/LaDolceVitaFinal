@@ -24,7 +24,7 @@ The website is currently **deployed** and available for a live demo at: **[La Do
    ```sh
    git clone https://github.com/Hussainish/LaDolceVitaFinal.git
    ```
-2.**Rename Project Directory** : Make sure to name the project folder whatever suits you or you can keep the same name it has.
+   2.**Rename Project Directory** : Make sure to name the project folder whatever suits you or you can keep the same name it has.
 3. **Setup Database**:
    - Import the `restaurant.sql` file from the `db` directory into MySQL or you can run `DB.php` once for minimal dabase creation - if you want you can update the database name in `DB.php` so that the newly created database will have the name you want.
    - In case you are using wampserver, you can create a database in `phpmyadmin` and then import `restaurant.sql` from the `db` directory.
