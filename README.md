@@ -38,8 +38,6 @@ The website is currently **deployed** and available for a live demo at: **[La Do
 ## Deployment
 The project is already deployed at **[La Dolce Vita](https://www.ladolcevitabyhussain.com/)**.
 
-### Demo Admin Credentials
-- **URL:** [Admin Panel](https://ladolcevitabyhussain.com/admin)
 
 
 
