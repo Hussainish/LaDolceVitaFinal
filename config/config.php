@@ -11,9 +11,9 @@ define('PROJECT_ROOT', str_replace('\\', '/', realpath(__DIR__ . '/../')) . '/')
  or you can use the restaurant.sql file that i have included in the project from the db folder 
  to import a small working database  that suits the project
  */
-define('DB_HOST', 'localhost'); // mysql server host - can be localhost
+define('DB_HOST', 'localhost'); // mysql server host - can be localhost or a server
 define('DB_USER', 'root'); // mysql username - in case of localhost its mostly root
-define('DB_PASS', ''); // mysql password 
+define('DB_PASS', ''); // mysql database password 
 define('DB_NAME', 'restaurant'); // database name
 
 
