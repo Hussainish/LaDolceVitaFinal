@@ -3,7 +3,7 @@
 ## Overview
 La Dolce Vita is a fully functional restaurant website project that provides users with a seamless experience to explore the restaurant's menu, make reservations, and learn about its services. The project is built using **PHP, HTML, CSS, JavaScript**, and **MySQL** and follows a structured, scalable architecture.
 
-The website is currently **deployed** and available for a live demo at: **[La Dolce Vita](https://ladolcevitabyhussain.com)**
+The website is currently **deployed** and available for a live demo at: **[La Dolce Vita](https://www.ladolcevitabyhussain.com/)**
 
 ## Features
 - **Homepage with Parallax Effects**: Engaging UI with smooth scrolling effects.
@@ -36,7 +36,7 @@ The website is currently **deployed** and available for a live demo at: **[La Do
    - Access the site at `http://localhost/LaDolceVitaFinal` in case you kept the folder name or `http://localhost/yourfoldername` in case you changed it.
 
 ## Deployment
-The project is already deployed at **[La Dolce Vita](https://ladolcevitabyhussain.com)**.
+The project is already deployed at **[La Dolce Vita](https://www.ladolcevitabyhussain.com/)**.
 
 
 ## License
